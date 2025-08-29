@@ -32,5 +32,5 @@ else:
     x = 10 ** ((y / 0.0011392) ** (1 / 6.497))
 
     # ========= 結果表示 =========
-    result = format_number_jp(int(x))
+    result = format_number_jp(x)
     st.write(result)
