@@ -31,7 +31,7 @@ else:
 
     # ========= 結果表示 =========
     result = format_number_jp(x)
-    st.write("あなたのスコアは " + result)
+    st.write("あなたのスコアは" + result)
 
 # 履歴リスト作ろう
 if "score_list" not in st.session_state:
