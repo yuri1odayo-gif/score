@@ -44,7 +44,7 @@ if st.button("結果を保存"):
     st.success("スコアを保存しました")
    
 # 履歴を書き出す
-if st.session_state.score_list
+if st.session_state.score_list:
     st.write("保存したスコア")
     for W in st.session_state.score_list
         st.write(W)
