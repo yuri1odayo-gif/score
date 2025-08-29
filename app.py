@@ -18,10 +18,7 @@ def format_number_jp(x):
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1, format="%d")
 
 # ========= 計算 =========
-result = None  # 事前に None で初期化
-
-if y == int(y):
-    y = int(y)
+if y = int(y):
     x = 10 ** ((y / 0.0011392) ** (1 / 6.497))
     result = format_number_jp(x)
     st.write("あなたのスコアは " + result)
