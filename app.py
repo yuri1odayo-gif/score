@@ -9,7 +9,7 @@ def format_number_jp(x):
     # 兆の部分
     cho = (x // 10**12)
     # 10億の部分
-    jyuuoku = int((x % 10**12) // 10**9)*10
+    jyuuoku = round((x % 10**12) // 10**9)*10
     
 
     parts = []
