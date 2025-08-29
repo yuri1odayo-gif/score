@@ -6,9 +6,9 @@ st.write("スコア計算ツール")
 
 # ========= 単位変換関数 =========
 def format_number_jp(x):
-    if n >= 10**12:
+    if x >= 10**12:
         return f"{x/10**12:.3f}兆"
-    elif n >= 10**8:
+    elif x >= 10**8:
         return f"{x/10**8:.3f}億"
     else:
         return f"{x:,.0f}"  # それ以下はカンマ区切りの整数
