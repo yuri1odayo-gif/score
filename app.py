@@ -8,21 +8,15 @@ st.write("スコア計算ツール")
 def format_number_jp(x):
     # 兆の部分
     cho = (x // 10**12)
-    # 億の部分
-    oku = (x % 10**12) // 10**8
-    # 万の部分
-    man = (x % 10**8) // 10**4
-    # 1の部分
-    ichi = int(x % 10**4)
+    # 10億の部分
+    jyuuoku = (x % 10**12) // 10**9
+    
 
     parts = []
     if cho > 0:
         parts.append(f"{cho}兆")
-    if oku > 0:
-        parts.append(f"{oku}億")
-    if man > 0:
-        parts.append(f"{man}万")
-    parts.append(f"{ichi}")
+        
+    parts.append(f"{jyuuoku}0億")
     return "".join(parts)
 
 # ========= 入力 =========
