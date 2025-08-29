@@ -5,15 +5,13 @@ st.write("ぷにぷにスコアタ")
 st.write("スコア計算ツール")
 
 # ========= 単位変換関数 =========
-def format_number_jp(n):
-    if n >= 1e12:
-        return f"{n/1e12:.4g}兆"
-    elif n >= 1e8:
-        return f"{n/1e8:.4g}億"
-    elif n >= 1e4:
-        return f"{n/1e4:.4g}万"
+def format_number(n):
+    if n >= 10**12:
+        return f"{n/10**12:.3f}兆"
+    elif n >= 10**8:
+        return f"{n/10**8:.3f}億"
     else:
-        return f"{n:.0f}"
+        return f"{n:,.0f}"  # それ以下はカンマ区切りの整数
 
 # ========= 入力 =========
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=13000, step=1, format="%d")
