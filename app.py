@@ -17,6 +17,10 @@ def format_number_jp(x):
     parts.append(f"{oku}億")
     return "".join(parts)
 
+# 履歴リスト作ろう
+if "score_list" not in st.session_state:
+    st.session_state.score_list = []
+
 # ========= 入力 =========
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1, format="%d")
 
@@ -33,9 +37,6 @@ else:
     result = format_number_jp(x)
     st.write("あなたのスコアは" + result)
 
-# 履歴リスト作ろう
-if "score_list" not in st.session_state:
-    st.session_state.score_list = []
 
 # 保存ボタン
 if st.button("結果を保存"):
