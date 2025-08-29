@@ -17,10 +17,6 @@ def format_number_jp(x):
 # ========= 入力 =========
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1, format="%d")
 
-# セッションに履歴リストを用意
-if "score_list" not in st.session_state:
-    st.session_state.score_list = []
-
 # ========= 計算 =========
 result = None  # 事前に None で初期化
 
@@ -32,16 +28,6 @@ if y == int(y):
 else:
     st.error("⚠️ y は整数を入力してください")
 
-# ========= 保存ボタン =========
-if result is not None and st.button("💾 結果を保存"):
-    st.session_state.score_list.append(result)
-    st.success("スコアを保存しました ✅")
-
-# ========= 履歴表示 =========
-if st.session_state.score_list:
-    st.write("📜 保存したスコア:")
-    for w in st.session_state.score_list:
-        st.write(w)
 
 # ========= 説明文 =========
 st.write("結果的に色々改良しました")
