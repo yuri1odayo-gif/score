@@ -33,7 +33,7 @@ else:
 
     # ========= 結果表示 =========
     result = format_number_jp(x)
-    st.write(result)
+    st.write("あなたのスコアは"result)
     
     st.write("結果的に色々改良しました")
     st.write("実際の値と1~2億誤差があります（自分調べ）")
