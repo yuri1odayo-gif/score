@@ -21,8 +21,8 @@ def format_number_jp(x):
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1, format="%d")
 
 # セッションに履歴を用意
-if "score" not in st.session_state:
-    st.session_state.score = []
+if "history" not in st.session_state:
+    st.session_state.history = []
 
 # 整数チェック（念のため）
 if y != int(y):
@@ -38,15 +38,15 @@ else:
     st.write("あなたのスコアは " + result)
 
     # ========= 保存ボタン =========
-    if st.button("スコアを保存"):
-        st.session_state.score.append(result)
-        st.success("スコアを保存しました")
+    if st.button("保存"):
+        st.session_state.history.append(result)
+        st.success("結果を保存しました ✅")
 
     # ========= 履歴表示 =========
-    if st.session_state.score:
-        st.write("今までのスコア:")
-        for W in st.session_state.score:
-            st.write(W)
+    if st.session_state.history:
+        st.write("📜 保存した履歴:")
+        for r in st.session_state.history:
+            st.write(r)
 
     # ========= 説明文 =========
     st.write("結果的に色々改良しました")
