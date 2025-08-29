@@ -9,14 +9,14 @@ def format_number_jp(x):
     # 兆の部分
     cho = (x // 10**12)
     # 10億の部分
-    jyuuoku = (x % 10**12) // 10**9
+    jyuuoku = int((x % 10**12) // 10**9)*10
     
 
     parts = []
     if cho > 0:
         parts.append(f"{cho}兆")
         
-    parts.append(f"{jyuuoku}0億")
+    parts.append(f"{jyuuoku}億")
     return "".join(parts)
 
 # ========= 入力 =========
