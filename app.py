@@ -16,7 +16,7 @@ def format_number_jp(x):
     if cho > 0:
         parts.append(f"{cho}兆")
         
-    parts.append(f"{jyuuoku}億")
+    parts.append(f"{oku}億")
     return "".join(parts)
 
 # ========= 入力 =========
