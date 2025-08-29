@@ -1,24 +1,29 @@
 import streamlit as st
 import math
 
-st.write("ぷにぷにスコアタ スコア計算ツール")
+st.write("ぷにぷにスコアタ")
+st.write("スコア計算ツール")
 
 # ========= 単位変換関数 =========
 def format_number_jp(x):
     # 兆の部分
-    cho = int(x // 10**12)
-    # 億の部分（兆を引いた残りから計算）
-    oku = int((x % 10**12) // 10**8)
+    cho = (x // 10**12)
+    # 億の部分
+    oku = (x % 10**12) // 10**8
+    # 万の部分
+    man = (x % 10**8) // 10**4
+    # 1の部分
+    ichi = int(x % 10**4)
 
+    parts = []
     if cho > 0:
-        if oku > 0:
-            return f"{cho}兆{oku}億"
-        else:
-            return f"{cho}兆"
-    elif oku > 0:
-        return f"{oku}億"
-    else:
-        return f"{x:,.0f}"
+        parts.append(f"{cho}兆")
+    if oku > 0:
+        parts.append(f"{oku}億")
+    if man > 0:
+        parts.append(f"{man}万")
+    parts.append(f"{ichi}")
+    return "".join(parts)
 
 # ========= 入力 =========
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=13000, step=1, format="%d")
@@ -33,4 +38,5 @@ else:
     x = 10 ** ((y / 0.0011392) ** (1 / 6.497))
 
     # ========= 結果表示 =========
-    st.write(f"約 {format_number_jp(x)} ", fontsize=20)
+    result = format_number_jp(int(x))
+    st.write(result)
