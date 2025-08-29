@@ -26,7 +26,7 @@ def format_number_jp(x):
     return "".join(parts)
 
 # ========= 入力 =========
-y = st.number_input("yマネー（整数のみ）", min_value=0, value=13000, step=1, format="%d")
+y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1, format="%d")
 
 # 整数チェック（念のため）
 if y != int(y):
