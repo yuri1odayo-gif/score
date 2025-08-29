@@ -6,12 +6,20 @@ st.write("スコア計算ツール")
 
 # ========= 単位変換関数 =========
 def format_number_jp(x):
-    if x >= 10**12:
-        return f"{x/10**12:.3f}兆"
-    elif x >= 10**8:
-        return f"{x/10**8:.3f}億"
+    # 兆の部分
+    cho = int(x // 10**12)
+    # 億の部分（兆を引いた残りから計算）
+    oku = int((x % 10**12) // 10**8)
+
+    if cho > 0:
+        if oku > 0:
+            return f"{cho}兆{oku}億"
+        else:
+            return f"{cho}兆"
+    elif oku > 0:
+        return f"{oku}億"
     else:
-        return f"{x:,.0f}"  # それ以下はカンマ区切りの整数
+        return f"{x:,.0f}"
 
 # ========= 入力 =========
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=13000, step=1, format="%d")
