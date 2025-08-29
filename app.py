@@ -6,8 +6,10 @@ st.write("スコア計算ツール")
 
 # ========= 単位変換関数 =========
 def format_number_jp(x):
-    cho = int(x // 10**12)           # 兆の部分
-    oku = round((x % 10**12) / 10**8)  # 億の部分
+    #兆の部分
+    cho = int(x // 10**12)           
+    #億の部分
+    oku = round((x % 10**12) / 10**8) 
     parts = []
     if cho > 0:
         parts.append(f"{cho}兆")
