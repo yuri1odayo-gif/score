@@ -1,8 +1,8 @@
 import streamlit as st
 import math
 
-st.title("ぷにぷにスコアタ")
-st.title("スコア計算ツール")
+st.write("ぷにぷにスコアタ")
+st.write("スコア計算ツール")
 
 # ========= 単位変換関数 =========
 def format_number_jp(n):
