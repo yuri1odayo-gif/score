@@ -7,7 +7,7 @@ st.write("スコア計算ツール")
 # ========= 単位変換関数 =========
 def format_number_jp(x):
     # 兆の部分
-    cho = (x // 10**12)
+    cho = int(x // 10**12)
     # 10億の部分
     jyuuoku = round((x % 10**12) // 10**9)*10
     
