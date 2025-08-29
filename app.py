@@ -8,8 +8,8 @@ st.write("スコア計算ツール")
 def format_number_jp(x):
     # 兆の部分
     cho = int(x // 10**12)
-    # 10億の部分
-    jyuuoku = round((x % 10**12) // 10**9)*10
+    # 億の部分
+    oku = round((x % 10**12) / 10**8)
     
 
     parts = []
