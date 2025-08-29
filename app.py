@@ -24,7 +24,6 @@ y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1
 if "score_list" not in st.session_state:
     st.session_state.score_list = []
 
-
 # 整数チェック（念のため）
 if y != int(y):
     st.error("⚠️ y は整数を入力してください")
