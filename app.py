@@ -39,9 +39,9 @@ else:
 
 
 # 保存ボタン
-if st.button("結果を保存"):
-    st.session_state.score_list.append(result)
-    st.success("スコアを保存しました")
+    if st.button("結果を保存"):
+        st.session_state.score_list.append(result)
+        st.success("スコアを保存しました")
    
 # 履歴を書き出す
 if st.session_state.score_list:
