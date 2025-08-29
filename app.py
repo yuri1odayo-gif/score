@@ -21,7 +21,7 @@ def format_number_jp(x):
 y = st.number_input("yマネー（整数のみ）", min_value=0, value=0, step=1, format="%d")
 
 # 履歴リスト作ろう
-if "score list" not in st.session_state:
+if "score_list" not in st.session_state:
     st.session_state = []
 
 
@@ -43,6 +43,13 @@ if st.button("結果を保存"):
     st.session_state.append(result)
     st.success("スコアを保存しました")
    
+# 履歴を書き出す
+if st.session_state.score_list
+    st.write("保存したスコア")
+    for W in st.session_state.score_list
+        st.write(W)
+    
+        
      # ========= 説明文 =========
     st.write("結果的に色々改良しました")
     st.write("実際の値と1~2億誤差があります（自分調べ）")
