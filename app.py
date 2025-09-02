@@ -33,6 +33,11 @@ else:
     result = format_number_jp(x)
     st.write("あなたのスコアは")
     
+    show_result = st.checkbox("結果を表示する", value =False)
+    if show_result:
+        nakami = f"{result}"
+    else :
+        nakami = "非表示"
     
         
     #========= 四角の枠　=========
@@ -43,13 +48,6 @@ else:
     </div>
     """,
     unsafe_allow_html=True
-    
-    show_result = st.checkbox("結果を表示する", value =False)
-
-    if show_result:
-        nakami = f"{result}"
-    else :
-        nakami = "非表示"
 )
     # ========= 説明文 =========
     st.write("")
