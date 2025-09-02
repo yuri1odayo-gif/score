@@ -31,7 +31,7 @@ else:
 
     # ========= 結果表示 =========
     result = format_number_jp(x)
-    st.write("あなたのスコアは ")
+    st.write("あなたのスコアは")
     st.markdown(f"## {result}")
 
 
