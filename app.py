@@ -50,6 +50,7 @@ else:
     unsafe_allow_html=True
 )
     # ========= 説明文 =========
+    st.write("")
     st.write("結果的に色々改良しました")
     st.write("実際の値と1~2億誤差があります（自分調べ）")
     st.write("注意してください")
