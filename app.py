@@ -36,7 +36,7 @@ else:
     show_result = st.checkbox("結果を表示する", value =False)
 
     if show_result:
-        nakami = f("{result}")
+        nakami = f"{result}"
     else :
         nakami = "非表示"
         
