@@ -42,11 +42,11 @@ else:
         
     #========= 四角の枠　=========
     st.markdown(
-    f"""
-    <div style='border: 2px solid_black; padding: 10px;'>
+    f""
+    <div style='border: 2px solid_black; padding: 10px; border-radius:5px;'>
         {nakami}
     </div>
-    """,
+    "",
     unsafe_allow_html=True
 )
     # ========= 説明文 =========
