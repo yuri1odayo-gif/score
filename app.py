@@ -33,7 +33,7 @@ else:
     result = format_number_jp(x)
     st.write("あなたのスコアは")
     
-    show_result = st.check.box("結果を表示する", value =False)
+    show_result = st.checkbox("結果を表示する", value =False)
 
     if show_result:
         nakami = f("{result}")
