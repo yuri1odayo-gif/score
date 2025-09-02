@@ -32,9 +32,23 @@ else:
     # ========= 結果表示 =========
     result = format_number_jp(x)
     st.write("あなたのスコアは")
-    st.markdown(f"## {result}")
+    
+    show_result = st.check.box("結果を表示する", value =False)
 
-
+    if show_result:
+        nakami = f("{result}")
+    else :
+        nakami = "非表示"
+        
+    #========= 四角の枠　=========
+    st.markdown(
+    f"""
+    <div style='border: 2px solied_black; padding: 10px>
+        {content}
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     # ========= 説明文 =========
     st.write("結果的に色々改良しました")
     st.write("実際の値と1~2億誤差があります（自分調べ）")
